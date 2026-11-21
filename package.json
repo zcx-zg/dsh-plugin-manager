@@ -1,0 +1,54 @@
+{
+  "name": "dsh-plugin-manager",
+  "version": "0.2.0",
+  "description": "Manage installed DSH plugins: list, enable, disable and remove downloaded plugins from the model tools or a Settings page in the web UI",
+  "license": "MIT",
+  "author": "zcx-zg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zcx-zg/dsh-plugin-manager.git"
+  },
+  "homepage": "https://github.com/zcx-zg/dsh-plugin-manager#readme",
+  "bugs": {
+    "url": "https://github.com/zcx-zg/dsh-plugin-manager/issues"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "icon": "./assets/icon.svg",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./assets/icon.svg"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "assets",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "plugin-manager"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.2-rc.1 <0.3.0-0"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Plugin manager",
+    "description": "Review, enable, disable and remove the third-party plugins installed in the current DSH profile."
+  }
+}

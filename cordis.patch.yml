@@ -1,0 +1,7 @@
+# dsh-plugin-manager bundle patch
+#
+# 安装后用 `dsh plugin --profile web add <本包>` 自动挂载；
+# 也可在 profiles/<name>/cordis.patch.yml 手动添加 insert 条目。
+- insert:
+    - id: dsh-plugin-manager
+      name: 'dsh-plugin-manager'
